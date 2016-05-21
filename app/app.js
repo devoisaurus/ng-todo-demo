@@ -6,7 +6,7 @@ app.controller("NavCtrl", function($scope){
 
 app.controller("TodoCtrl", function($scope){
 	$scope.welcome = "hello";
-	$scope.showListView = false;
+	$scope.showListView = true;
 	$scope.task = "";
 	$scope.newTask = {};
 
