@@ -1,7 +1,7 @@
 var app = angular.module("TodoApp", []);
 
 app.controller("NavCtrl", function($scope){
-	$scope.navItems = [{name: "Logout"}, {name: "All Items"}, {name: "New Item"}]
+	$scope.navItems = [{name: "Logout"}, {name: "All Items"}, {name: "New Item"}];
 });
 
 app.controller("TodoCtrl", function($scope){
@@ -41,7 +41,7 @@ app.controller("TodoCtrl", function($scope){
 		urgency: "medium",
 		dependencies: "hammock, cat, pillow, blanket"
 			}
-		]
+		];
 
 	$scope.newItem = function(){
 		console.log("you clicked new item");
@@ -58,5 +58,5 @@ app.controller("TodoCtrl", function($scope){
 		console.log("you added a new item", $scope.newTask);
 		$scope.items.push($scope.newTask);
 		$scope.newTask = "";
-	}
+	};
 });
