@@ -25,7 +25,5 @@ app.controller("ItemNewCtrl", function($scope, $http, $location){
 			console.log(response);
 			$location.url("/items/list")
 		})
-
-
 	};
 });
