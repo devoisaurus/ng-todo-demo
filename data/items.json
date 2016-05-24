@@ -1,6 +1,6 @@
 {
 	"items": {
- 		"item1":	{
+ 		"item0":	{
 			"task": "mow the lawn",
 			"isCompleted": true,
 			"dueDate": "12/5/17",
@@ -9,7 +9,7 @@
 			"urgency": "low",
 			"dependencies": "sunshine, clippers, hat, water, headphones"
 				},
-	 "item 2": {
+	 "item1": {
 			"task": "grade quizzes",
 			"isCompleted": false,
 			"dueDate": "12/5/15",
@@ -18,7 +18,7 @@
 			"urgency": "high",
 			"dependencies": "wifi, tissues, vodka"
 				},
-	 "item3":		{
+	 "item2":		{
 			"task": "take a nap",
 			"isCompleted": false,
 			"dueDate": "5/21/16",
@@ -28,4 +28,4 @@
 			"dependencies": "hammock, cat, pillow, blanket"
 			}
 		}
-	};
+	}
