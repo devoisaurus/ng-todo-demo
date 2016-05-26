@@ -84,6 +84,28 @@ app.factory("itemStorage", function($q, $http, firebaseURL){
         });
     };
 
-	return {getItemList:getItemList, deleteItem:deleteItem, postNewItem:postNewItem, getSingleItem:getSingleItem, updateItem:updateItem};
+    var updateCompletedStatus = function(newItem){
+        return $q(function(resolve, reject) {
+            $http.put(
+                firebaseURL + "items/" + newItem.id + ".json",
+                JSON.stringify({
+                    assignedTo: newItem.assignedTo,
+                    dependencies: newItem.dependencies,
+                    dueDate: newItem.dueDate,
+                    isCompleted: newItem.isCompleted,
+                    location: newItem.location,
+                    task: newItem.task,
+                    urgency: newItem.urgency
+                })
+            )
+            .success(
+                function(objectFromFirebase) {
+                    resolve(objectFromFirebase);
+                }
+            );
+        });
+    };
+
+	return {updateCompletedStatus:updateCompletedStatus, getItemList:getItemList, deleteItem:deleteItem, postNewItem:postNewItem, getSingleItem:getSingleItem, updateItem:updateItem};
 
 });

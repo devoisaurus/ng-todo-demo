@@ -11,7 +11,7 @@ app.controller("ItemNewCtrl", function($scope, $http, $location, itemStorage){
         task:"",
         urgency:""
     };
-      
+
     $scope.addNewItem = function(){
         itemStorage.postNewItem($scope.newTask)
             .then(function successCallback(response) {
